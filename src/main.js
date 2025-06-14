@@ -19,8 +19,8 @@ form.addEventListener('submit', event => {
     showLoader();
 
     getImagesByQuery(input)
-        .then(response => {
-            const images = response.data.hits;
+        .then(data => {
+            const images = data.hits;
             if (images.length === 0) {
                 iziToast.error({
                     message: 'Sorry, there are no images matching your search query. Please try again!',
